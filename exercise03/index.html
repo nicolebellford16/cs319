@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Unit 3 Exercise</title>
+  </head>
+  <body>
+      <h1>Calculator</h1>
+      <p id="equation"></p>
+      <script>
+      function addnumber() {
+          var x = 5;
+          var y = 11;
+          var answer = x + y; 
+          document.getElementById("equation").innerHTML= x + " plus " + y + " equals " + answer + "!";
+      }
+         function subtractnumber() {
+          var x = 10;
+          var y = 5;
+          var answer = x - y; 
+          document.getElementById("equation").innerHTML= x + " minus " + y + " equals " + answer + "!";
+      } 
+          function multiplynumber() {
+          var x = 2;
+          var y = 3;
+          var answer = x * y; 
+          document.getElementById("equation").innerHTML= x + " times " + y + " equals " + answer + "!";
+      } 
+          function dividenumber() {
+          var x = 20;
+          var y = 4;
+          var answer = x / y; 
+          document.getElementById("equation").innerHTML= x + " divided by " + y + " equals " + answer + "!";
+      } 
+      </script>
+      
+    <form name="calculator" action="#" method="get">
+        <input type="button" id="add" name="add" value="Add" onclick="addnumber()";>
+        <input type="button" id="subtract" name="subtract" value="Subtract" onclick="subtractnumber()";>
+        <input type="button" id="multiply" name="multiply" value="Multiply" onclick="multiplynumber()";>
+        <input type="button" id="divide" name="divide" value="Divide" onclick="dividenumber()";>
+      </form>
+  </body>
+</html>
