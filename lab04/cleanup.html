@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+      <script>
+      function fullname() {
+          var firstname;
+           firstname = document.namecleanup.exampleText.value; 
+          firstname = firstname.trim();
+          firstname = firstname.toUpperCase();
+           var middleinitial;
+           middleinitial = document.namecleanup.moreText.value;
+          middleinitial = middleinitial.trim();
+          middleinitial = middleinitial.toUpperCase();
+           var lastname;
+           lastname = document.namecleanup.extraText.value;
+           lastname = lastname.trim();
+          lastname = lastname.toUpperCase();
+          var fullname;
+          fullname = firstname + " " + middleinitial + " " + lastname; 
+          document.namecleanup.extraaText.value = fullname; 
+      }
+      </script>
+      <h1>Name Cleanup</h1>
+    <form name="namecleanup" id="namecleanup" action="method" method="get">
+      <p>First Name:<input type="text" name="exampleText" id="exampleText"></p> 
+        <p>Middle Initial:<input type="text" name="moreText" id="moreText"></p>
+        <p>Last Name:<input type="text" name="extraText" id="extraText"></p>
+        <p> <input type="button" name="go" id="go" value="Cleanup Name" onclick="fullname();"> </p>
+        <p>Full Name:<input type="text" name="extraaText" id="extraaText"></p>
+      </form>
+  </body>
+</html>
