@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <title>Lab 5</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+      <script>
+      function formValidate() {
+         //alert("Please work!");
+         var firstname;  
+          var lastname;   
+          var email;  
+          
+          firstname = document.basicinfo.exampleText.value;
+          firstname = firstname.trim(); 
+          parseInt(firstname);
+          lastname = document.basicinfo.extraText.value;
+          lastname = lastname.trim();
+          parseInt(lastname);
+          email = document.basicinfo.moreText.value; 
+          email = email.trim();
+          parseInt(email);
+          
+          if (firstname == "") {
+              alert("Please enter your first name!");
+              return false;
+          }
+           
+
+          if (lastname == "") {
+              alert("Please enter your last name!");
+              return false;
+          }
+          
+          
+          if (email == "") {
+              alert("Please enter your email!");
+              return false;
+          }
+          else {
+              return true; 
+          }
+      }
+      </script>
+    <form name="basicinfo" id="basicinfo" action="http://yoda.cs.uwec.edu/cs319/students/siasmj/echo.php" method="get" onsubmit="return formValidate();">
+      <p>First Name:<input type="text" name="exampleText" id="exampleText"></p> 
+        <p>Last Name:<input type="text" name="extraText" id="extraText"></p>
+        <p>Email Address:<input type="text" name="moreText" id="moreText"></p>
+        <p> <input type="submit" name="go" id="go" value="go!"> </p>
+       </form>
+  </body>
+</html>
