@@ -1,0 +1,24 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    </head>
+    <body> 
+    <script>
+        function check() {
+            var first = 
+                document.example.exampleText.value;
+            var second = document.example.moreText.value;
+            first= parseInt(first);
+            second= parseInt(second);
+            document.getElementById("words").innerHTML = first + second; 
+        }
+        </script>
+        <form name="example" id="example" action="method" method="get">
+        <p> First Input: <input type="text" name="exampleText" id="exampleText"></p>
+            <p> Second Input: <input type="text" name="moreText" id="moreText"></p>
+            <p> <input type="button" name="go" id="go" value="go!" onclick="check();"> </p>
+        </form>
+        
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    </head>
+    <body> 
+    <script>
+       function getAnswer(){
+           var name;
+           name = document.biography.exampleText.value; 
+           var number;
+           number = document.biography.moreText.value;
+           number = parseInt(number);
+           var color;
+           color = document.biography.color.value; 
+           var animal; 
+           animal = document.biography.animal.value; 
+           
+           document.getElementById("answer").innerHTML = "Hello! My name is " +  name  + " and I have " +  number  + " fantastic " +  color  + " "  + animal + "!";
+       }
+        </script>
+        <form name="biography" id="bio" action="method" method="get">
+        <p> Name:<input type="text" name="exampleText" id="exampleText"></p>
+            <p>Number:<input type="text" name="moreText" id="moreText"></p> <br>
+             Color: <br> 
+            <input type="radio" name="color" value="black" id="black">Black<br>
+             <input type="radio" name="color" value="pink" id="pink">Pink <br>
+             <input type="radio" name="color" value="blue" id="blue">Blue<br> <br> 
+            Animal (plural): <br> 
+            <select name="animal" id="animal"> 
+            <option>turtles</option>
+                <option>horses</option>
+                <option>dolphins</option>
+                <option>dogs</option>
+                <option>cats</option>
+            </select>
+            <p> <input type="button" name="go" id="go" value="Tell Story!" onclick="getAnswer();"> </p>
+        </form>
+        <hr>
+       <p id="answer"></p> 
+    </body>
+</html>

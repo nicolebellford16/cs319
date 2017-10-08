@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Exercise 05</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Months</h1>
+        <script>
+            function months() {
+                var input;
+                input = document.calendar.number.value;
+                input = input.trim();
+                parseInt(input);
+                
+                if (input == 1) {
+                    alert("January");
+                    return true;
+                }   
+                else if (input == 2) {
+                    alert("February");
+                    return true;
+                }     
+                else if (input == 3) {
+                    alert("March");
+                    return true;    
+                }
+                else if (input == 4) {
+                    alert("April");
+                    return true;    
+                }
+                else if (input == 5) {
+                    alert("May");
+                    return true;    
+                }
+                else if (input == 6) {
+                    alert("June");
+                    return true;    
+                }
+                else if (input == 7) {
+                    alert("July");
+                    return true;    
+                }
+                else if (input == 8) {
+                    alert("August");
+                    return true;    
+                }
+                else if (input == 9) {
+                    alert("September");
+                    return true;    
+                }
+                else if (input == 10) {
+                    alert("October");
+                    return true;    
+                }
+                else if (input == 11) {
+                    alert("November");
+                    return true;    
+                }
+                else if (input == 12) {
+                    alert("December");
+                    return true;    
+                }
+                else if (input > 12) {
+                    alert("I don't think that number corresponds to a month.");
+                    document.calendar.number.focus();
+                    document.calendar.number.style.backgroundColor = "#ffc6c6"; 
+                    return false;
+                }
+                else if (input < 1) {
+                    alert("I don't think that number corresponds to a month."); 
+                    document.calendar.number.focus();
+                    document.calendar.number.style.backgroundColor = "#ffc6c6";
+                    return false;
+                }
+            }
+        </script>
+        <form name="calendar" id="calendar" action="#" method="get" onsubmit="return months();">
+            <p>Month Number: <input type="number" name="number" id="number"></p>
+            <input type="submit" name="submit" id="submit">
+        </form>
+    </body>
+</html>
