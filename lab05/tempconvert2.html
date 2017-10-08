@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <title> Lab 5 Part 2</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+<h1>Temperature Converter</h1>
+      <script>
+   
+          function tempConvert() {
+              //alert("hello");
+              var f = document.tempconvert.exampleText.value;
+              var c = document.tempconvert.moreText.value; 
+              if (doument.getElementbyId("fc").checked == true) {
+                  c = (f - 32) * (5/9);
+                document.tempconvert.moreText.value = c;
+                document.tempconvert.moreText.style.backgroundColor = "lightGreen";
+                  return true;
+              } if (document.getElementbyId("cf").checked == true) {
+                  f = (c * (9/5)) + 32;
+                  document.tempconvert.exampleText.value = f;
+                  document.tempconvert.exampleText.style.backgroundColor = "lightGreen";
+                  return true;
+              }    
+              
+          }
+          
+      </script>
+      <form name="tempconvert" id="tempconvert" action="method" method="get">
+      <p>Temperature in Fahrenheit:<input type="text" name="exampleText" id="exampleText"></p>
+            <input type="radio" name="temp" id="fc" value="F to C"> F to C <br>
+           <input type="radio" name="temp" id="cf" value="C to F"> C to F
+          <p>Temperature in Celsius:<input type="text" name="moreText" id="moreText"></p> 
+          <input type="button" name="converter" id="convert" value="Convert" onclick="tempConvert();">
+      </form>
+  </body>
+</html>
