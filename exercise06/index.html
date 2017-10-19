@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Unit 6 Exercise</title>
+  </head>
+  <body>
+    <script>
+      function guess_number() {
+          var numberguess = 8
+          var input = document.numbergame.number.value; 
+          input = input.trim();
+          
+           if (input == "") {
+                    alert("Please enter a guess!");
+                    document.numbergame.number.focus();
+                    return false;
+                }   
+                else if (isNaN(input) == true) {
+                    alert("Please enter a number!");
+                    document.numbergame.number.select();
+                    return false;
+                } else if (input < 1) {
+                    alert("Please enter a value between 1 and 10!");
+                    document.numbergame.number.select();
+                    return false;
+                     } else if (input > 10) {
+                    alert("Please enter a value between 1 and 10!");
+                    document.numbergame.number.select();
+                    return false;
+                     } else if (input < numberguess) {
+                    alert("Guess a higher number!");
+                    document.numbergame.number.select();
+                    return false;
+                     } else if (input > numberguess) {
+                    alert("Guess a lower number!");
+                    document.numbergame.number.select();
+                    return false;
+                     } else if (input == numberguess) {
+                    alert("Congratulations! You are correct!");
+                    return true;
+                     }
+           }
+      
+      </script>
+       <form name="numbergame" id="numbergame" action="#" method="get" onsubmit="return guess_number();">
+         <p>Guess the Number! <input type="text" name="number" id="number"></p>
+            <input type="submit" name="submit" id="submit" value="submit">
+      </form>
+  </body>
+</html>
