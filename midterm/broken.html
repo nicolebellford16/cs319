@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Midterm Program 5</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function toCelsius() {
+                var tempF;
+                var tempC;
+                
+                tempF = parseInt(document.tempConvert.fahrenheitValue.value);
+               tempC = (tempF - 32) * (5/9);
+                document.tempConvert.celsiusValue.value = tempC;
+                document.tempConvert.celsiusValue.style.backgroundColor = "#e5ffe5";
+                
+            }
+        </script>
+        <form name="tempConvert" id="tempConvert" action="#" method="get">
+            <p>Fahrenheit: <input type="text" name="fahrenheitValue" id="fahrenheitValue"></p>
+            <p>Celsius: <input type="text" name="celsiusValue" id="celsiusValue"></p>
+            <p><input type="button" name="fToC" value="fToC" onclick="toCelsius();"></p>
+        </form>
+    </body>
+</html>
