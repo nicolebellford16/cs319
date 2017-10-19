@@ -10,7 +10,9 @@
                 var firstfood;
                 var secondfood;
                 firstfood = document.getElementById("ffood").value; 
+                firstfood = firstfood.toLowerCase();
                 secondfood = document.getElementById("sfood").value; 
+                secondfood = secondfood.toLowerCase();
                 alert("Your favorite foods are: " + firstfood + " and " + secondfood);
             }
         </script>
